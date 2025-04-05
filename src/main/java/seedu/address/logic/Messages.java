@@ -17,7 +17,8 @@ public class Messages {
     public static final String MESSAGE_INVALID_PERSON_DISPLAYED_INDEX = "The person index provided is invalid";
     public static final String MESSAGE_PERSONS_LISTED_OVERVIEW = "%1$d persons listed!";
     public static final String MESSAGE_WEDDING_NOT_FOUND = "The specified wedding ID %1$s does not exist.";
-    public static final String MESSAGE_INVALID_WEDDING_ID = "Wedding ID must start with 'W' followed by one or more digits, e.g. 'W1', 'W15'.";
+    public static final String MESSAGE_INVALID_WEDDING_ID =
+            "Wedding ID must start with 'W' followed by one or more digits, e.g. 'W1', 'W15'.";
 
 
     /**
