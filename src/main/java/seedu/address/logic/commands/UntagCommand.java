@@ -64,7 +64,7 @@ public class UntagCommand extends Command {
         model.untagPerson(personToUntag, tag);
 
         // Reapply the filter so that only persons with the specified wedding id remain.
-        model.updateFilteredPersonList(new TagMatchesPredicate(weddingId));
+        // model.updateFilteredPersonList(new TagMatchesPredicate(weddingId));
 
         return new CommandResult(String.format(MESSAGE_UNTAG_PERSON_SUCCESS,
                 personToUntag.getName().fullName, weddingId));
