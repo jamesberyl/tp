@@ -5,6 +5,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_WEDDING_ID;
 
 import java.util.stream.Stream;
 
+import seedu.address.logic.Messages;
 import seedu.address.logic.commands.AddTaskCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.wedding.WeddingId;
@@ -26,6 +27,10 @@ public class AddTaskCommandParser implements Parser<AddTaskCommand> {
 
         String weddingIdStr = argMultimap.getValue(PREFIX_WEDDING_ID).get();
         String description = argMultimap.getValue(PREFIX_TASK_DESCRIPTION).get();
+
+        if (!WeddingId.isValidWeddingId(weddingIdStr)) {
+            throw new ParseException(Messages.MESSAGE_INVALID_WEDDING_ID);
+        }
 
         WeddingId weddingId = new WeddingId(weddingIdStr);
 
